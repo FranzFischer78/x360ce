@@ -50,7 +50,7 @@ jobs:
     steps:
       - name: Install .NET 4.0 Targeting Pack
         run: |
-          choco install net40 -y
+          choco install dotnet4.0 -y
       - uses: actions/checkout@v4
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v2
