@@ -54,6 +54,10 @@ jobs:
       - name: Setup NuGet
         uses: NuGet/setup-nuget@v1
       - name: Restore NuGet packages
-        run: nuget restore MySolution.sln
+        run: nuget restore x360ce.App.sln
       - name: Build Solution
-        run: msbuild MySolution.sln /p:Configuration=Release
+        run: msbuild x360ce.App.sln /p:Configuration=Release
+      - name: Restore NuGet packages
+        run: nuget restore x360ce_dll.sln
+      - name: Build Solution
+        run: msbuild x360ce_dll.sln /p:Configuration=Release
